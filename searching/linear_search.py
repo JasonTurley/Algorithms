@@ -5,9 +5,7 @@ Implementation of the linear search algorithm:
 
 	Worst Case: O(n) when target is last element in list
 
-For doctests run the following command:
-	python -m doctests -v linear_search.py
-	or
+For doctests run:
 	python3 -m doctest -v linear_search.py
 
 For manual testing run:
