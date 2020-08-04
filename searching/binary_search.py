@@ -54,9 +54,14 @@ def binary_search_helper(arr, x, low, high):
 		return mid
 
 if __name__ == "__main__":
-	result = binary_search([10, 20, 30, 40, 50, 60, 70, 80], 30)
+	user_input = input("Enter numbers separated by spaces:\n")
+	arr = [int(item) for item in user_input.split()]
 
-	if result is not None:
-		print(f"Found at {result}")
+	target = int(input("Enter the target value to search for:\n"))
+
+	retval = binary_search(arr, target)
+
+	if retval is not None:
+		print(f"Found {target} at index {retval}")
 	else:
-		print("Not found")
+		print(f"{target} not found")
