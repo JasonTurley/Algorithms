@@ -9,10 +9,10 @@ For manual testing run:
 	python3 insertion_sort.py
 """
 
-def insertion_sort(arr):
+def insertion_sort(A):
 	"""Implememtation of insertion sort in Python
 
-	:param arr: a list of numbers (unsorted or sorted)
+	:param A: a list of numbers (unsorted or sorted)
 	:return: the sorted array
 
 	Examples:
@@ -30,24 +30,24 @@ def insertion_sort(arr):
 
 	"""
 
-	for i in range(1, len(arr)):
+	for i in range(1, len(A)):
 		j = i - 1
-		key = arr[i]
+		key = A[i]
 
 		# move numbers greater than key to one position up
-		while j >= 0 and key < arr[j]:
-			arr[j + 1] = arr[j]
+		while j >= 0 and key < A[j]:
+			A[j + 1] = A[j]
 			j -= 1
 
-		arr[j + 1] = key
+		A[j + 1] = key
 
-	return arr
+	return A
 
 if __name__ == "__main__":
 	user_input = input("Enter numbers separated by spaces:\n")
-	arr = [int(item) for item in user_input.split()]
+	A = [int(item) for item in user_input.split()]
 
-	arr = insertion_sort(arr)
+	A = insertion_sort(A)
 
 	print("Here is the sorted list:")
-	print(arr)
+	print(A)
